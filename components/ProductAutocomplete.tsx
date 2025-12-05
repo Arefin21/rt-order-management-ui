@@ -56,7 +56,7 @@ export default function ProductAutocomplete({ onSelect, disabled }: ProductAutoc
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setSelectedIndex((prev) => 
+      setSelectedIndex((prev) =>
         prev < products.length - 1 ? prev + 1 : prev
       );
     } else if (e.key === 'ArrowUp') {
@@ -89,7 +89,7 @@ export default function ProductAutocomplete({ onSelect, disabled }: ProductAutoc
         placeholder="Search by product name, barcode, or SKU..."
         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
       />
-      
+
       {loading && (
         <div className="absolute right-3 top-2.5">
           <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-indigo-600"></div>
