@@ -18,11 +18,11 @@ export default function LoginPage() {
 
     try {
       const response = await authService.login(email, password);
-      
+
       // Store token and user info
       localStorage.setItem('access_token', response.access_token);
       localStorage.setItem('user', JSON.stringify(response.user));
-      
+
       // Redirect to dashboard
       router.push('/dashboard');
     } catch (err: any) {
@@ -40,7 +40,7 @@ export default function LoginPage() {
             Sign in to your account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            RT Order Management System
+            {process.env.NEXT_PUBLIC_APP_NAME || 'RT Order Management'} System
           </p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

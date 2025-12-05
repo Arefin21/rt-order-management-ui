@@ -31,7 +31,7 @@ export default function DashboardPage() {
             <div className="flex justify-between h-16">
               <div className="flex items-center">
                 <h1 className="text-xl font-semibold text-gray-900">
-                  RT Order Management
+                  {process.env.NEXT_PUBLIC_APP_NAME || 'RT Order Management'}
                 </h1>
               </div>
               <div className="flex items-center space-x-4">

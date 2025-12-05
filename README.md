@@ -4,13 +4,24 @@ Frontend application for RT Order Management System built with Next.js 15.
 
 ## Getting Started
 
-First, install dependencies:
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-Run the development server:
+### 2. Environment Configuration
+
+Create a `.env` file in the root directory with the following content:
+
+```env
+NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/api
+NEXT_PUBLIC_APP_NAME=OrderManagement
+```
+
+**Note:** If your Laravel API is running on a different URL, update `NEXT_PUBLIC_API_URL` accordingly.
+
+### 3. Run Development Server
 
 ```bash
 npm run dev
